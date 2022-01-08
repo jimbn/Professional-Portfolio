@@ -3,7 +3,49 @@
     margin: 0;
     padding: 0;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  }
+}
+
+/* Scroll padding to adjust for header {position: sticky;} */
+html {
+    scroll-padding-top: 4rem;
+}
+
+body {
+    background-color: silver;
+}
+
+/* Begin of header / nav bar */
+
+header {
+    padding: 15px 40px;
+    background-image: linear-gradient(slategrey,silver);
+    display: flex;
+    justify-content: right;
+    flex-wrap: wrap;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    height: 3rem;
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+header nav {
+    text-indent: 15px;
+    font-size: 20px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, .75);
+}
+
+header nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+/* End of header / nav bar */
 
 .profile-picture img {
     width: 400px;
@@ -50,4 +92,29 @@
     border: 1px solid rgba(000000, 000000, 000000, 0.5);
 } */
 
+/* Begin of footer */
 
+footer {
+    padding: 20px 40px;
+    background-image: linear-gradient(silver, slategrey);
+}
+
+footer h1 {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer ul {
+    text-indent: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+footer img {
+    width: 32px;
+    height: 32px;
+}
+
+/* End of footer */
