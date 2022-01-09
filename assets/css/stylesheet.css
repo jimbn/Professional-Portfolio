@@ -14,13 +14,16 @@ body {
     background-color: silver;
 }
 
+section {
+    margin-bottom: 5em;
+}
+
 /* Begin of header / nav bar */
 
 header {
     padding: 15px 40px;
     background-image: linear-gradient(rgb(112, 128, 144),rgb(192, 192, 192));
-    border-bottom-style: solid;
-    border-color: rgba(192, 192, 192, 0.5);
+    border-bottom: 2px solid rgba(192, 192, 192, 0.5);;
     display: flex;
     justify-content: right;
     flex-wrap: wrap;
@@ -49,11 +52,37 @@ header nav ul{
 }
 
 /* End of header / nav bar */
+/* Begin of footer */
+
+footer {
+    margin-top: 3em;
+    padding: 20px 40px;
+    background-image: linear-gradient(silver, slategrey);
+    display:flex;
+    bottom: 0;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer ul {
+    display: flex;
+    list-style: none;
+    text-indent: 10px;
+}
+
+footer img {
+    width: 40px;
+    height: 40px;
+}
+
+/* End of footer */
+
 /* Beginning of #home */
 
 #home {
     text-align: center;
-    padding-top: 25px;
+    margin-top: 4em;
 }
 
 #home h1 {
@@ -75,7 +104,6 @@ header nav ul{
     padding: 100px;
 }
 
-
 /* End of #about */
 
 /* Begin of . experience section */
@@ -88,24 +116,23 @@ header nav ul{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    margin-bottom: 4em;
 }
 
 .experience-individual {
     position: relative;
 }
 
-
 .experience-individual img {
-    width: 450px;
     height: 200px;
     border: 2px solid;
     color: black;
 }
 
 
-.experience-individual img:hover {
-    border: 5px double yellow;
+.experience-individual:hover {
+    opacity: 75%;
 }
 
 
@@ -116,7 +143,6 @@ header nav ul{
     text-shadow: 2px 2px 2px rgba(0, 0, 0, .25);
     bottom: 20px;
     left: 20px;
-    z-index: 1;
     position: absolute;
 }
 
@@ -174,32 +200,6 @@ header nav ul{
 
 /* End of .experience section */
 
-/* Begin of footer */
-
-footer {
-    padding: 20px 40px;
-    background-image: linear-gradient(silver, slategrey);
-}
-
-footer h1 {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-footer ul {
-    text-indent: 15px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    list-style: none;
-}
-
-footer img {
-    width: 32px;
-    height: 32px;
-}
-
-/* End of footer */
 
 
 .text-right {
@@ -213,4 +213,5 @@ footer img {
 .text-left {
     inline-size: 15%;
     float: left;
+    font-size: 30px;
 }
