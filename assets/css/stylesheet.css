@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 /* Scroll padding to adjust for header {position: sticky;} */
@@ -18,7 +18,9 @@ body {
 
 header {
     padding: 15px 40px;
-    background-image: linear-gradient(slategrey,silver);
+    background-image: linear-gradient(rgb(112, 128, 144),rgb(192, 192, 192));
+    border-bottom-style: solid;
+    border-color: rgba(192, 192, 192, 0.5);
     display: flex;
     justify-content: right;
     flex-wrap: wrap;
@@ -26,6 +28,7 @@ header {
     position: -webkit-sticky;
     top: 0;
     height: 3rem;
+    z-index: 9999;
 }
 
 header a {
@@ -36,7 +39,7 @@ header a {
 header nav {
     text-indent: 15px;
     font-size: 20px;
-    text-shadow: 0 0 10px rgba(0, 0, 0, .75);
+    text-shadow: 5px 2px 10px rgba(0, 0, 0, .75);
 }
 
 header nav ul{
@@ -46,24 +49,50 @@ header nav ul{
 }
 
 /* End of header / nav bar */
+/* Beginning of #home */
+
+#home {
+    text-align: center;
+    padding-top: 25px;
+}
+
+#home h1 {
+    text-shadow: 5px 2px 25px rgba(0, 0, 0, .9);
+    font-size: 30px;
+}
 
 .profile-picture img {
     width: 400px;
     height: 400px;
     border: 2px solid;
-    color: black;
+    color: rgba(0, 0, 0, .25);
     border-radius: 75%;
 }
 
+/* End of #home */
+/* Begin of #about*/
+#about {
+    padding: 15px;
+}
+
+#about p {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* End of #about */
 
 /* Begin of . experience section */
+
+#experience {
+    padding: 15px;
+    padding-bottom: 40px;
+}
 
 .experience-item {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    padding: 25px;
-    text-align: center;
 }
 
 .experience-item img {
@@ -73,7 +102,31 @@ header nav ul{
     color: black;
 }
 
-/* Hide .hide within .show */
+.experience-indvidual{
+    position: relative; 
+}
+
+.show {
+    position: relative;
+    font-size: 30px; 
+    background-color: rgba(192, 192, 192, 0.5);
+    bottom: 42px;
+    padding-left: 20px;
+}
+
+.languages {
+    position: relative;
+    font-size: 15px;
+    bottom: 75px;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.languages ul {
+    list-style: none;
+    align-items: right;
+}
+/* Hide .hide within .show
 .hide {
     display: none;
     overflow-wrap:break-word;
@@ -81,9 +134,9 @@ header nav ul{
 }
 
 /* Display .hide when cursor hovers above .show */
-.show:hover + .hide {
+/* .show:hover + .hide {
     display: inline-flex;
-} 
+}  */ 
 
 /* End of .experience section */
 
