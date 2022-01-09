@@ -97,6 +97,10 @@ header nav ul{
     color: black;
 }
 
+.experience-item img:hover {
+    border: 5px double yellow;
+}
+
 .experience-title {
     font-size: 30px; 
     margin: 0 2px;
