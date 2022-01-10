@@ -109,9 +109,7 @@ footer img {
 /* Begin of #about*/
 #about {
     padding: 50px;
-
 }
-
 
 /* End of #about */
 
@@ -130,11 +128,14 @@ footer img {
 
 .experience-individual {
     position: relative;
+    width: 50%;
+    padding: 5px;
 }
 
 .experience-individual img {
     height: 200px;
     border: 2px solid slategrey;
+    width: 100%;
 }
 
 
@@ -154,7 +155,7 @@ footer img {
 }
 
 .languages {
-    font-size: 15px;
+    font-size: 20px;
     text-align: right;
     color:rgba(0, 0, 0, .55);
     text-shadow: 2px 2px 2px rgba(0, 0, 0, .25);
@@ -179,7 +180,7 @@ footer img {
 
 .main img {
     width: 100%;
-    height: 400px;
+    height: 350px;
     border: 2px solid grey;
 }
 
@@ -226,11 +227,7 @@ footer img {
 
 
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
-@media screen and (max-width: 1230px) {
-    .text-left {
-        flex: 0 40%;
-    }
-}
+
 
 @media screen and (max-width: 980px) {
 
@@ -257,6 +254,10 @@ footer img {
   
   /* MEDIA QUERY FOR TABLETS AND SMALLER */
   @media screen and (max-width: 768px) {
+    .text-left{
+        font-size: 25px;
+    }
+
     header {
         justify-content: center;
     } 
@@ -264,7 +265,8 @@ footer img {
     #about .text-left {
         padding-right: 4em;
     }
-
+    
+  
     .experience-title {
         font-size: 20px;
     }
@@ -294,33 +296,116 @@ footer img {
     }
 
     #about .text-left {
-        padding-right: 4em;
+        padding-right: 2em;
     }
 
-    .experience-individual img {
-        height: 100px;
-        width: 250px;
+    #about, #experience {
+        padding: 0 1em;
     }
 
-    .main  img {
-        width: 275px;
-        height: 200px;
+    .experience-title {
+        font-size: 15px;
+        bottom: 20px;
+        left: 12px;
+    }
+    
+    .languages {
+        font-size: 10px;
+        bottom: 20px;
+        right: 12px;
     }
 
     .main .experience-title {
-        font-size: 20px;
-    }
-    
-    .main .languages {
-        font-size: 10px;
+        font-size: 25px;
+        bottom: 20px;
+        left: 30px;
     }
 
-    .text-right {
+    .main .languages {
+        font-size: 20px;
+        right: 35px;
+        bottom: 15px
+    }
+
+
+    .text-right, footer h1 {
         font-size: 15px;
     }
 
     .text-left, #home h1 {
         font-size: 20px;
     }
+
+    footer ul {
+        display: flex;
+        list-style: none;
+        text-indent: 10px;
+    }
+    
+    footer img {
+        width: 27px;
+        height: 27px;
+    }
+
   }
   
+  @media screen and (max-width: 375px) {
+    header nav ul li a {
+        font-size: 10px;
+    }
+
+    .experience-individual {
+        padding: 0;
+    }
+
+    .experience-individual img {
+        height: 50px;
+    }
+
+    .main img {
+        height: 75px;
+    }
+
+    .experience-title {
+        font-size: 7px;
+    }
+    
+    .languages {
+        font-size: 5px;
+    }
+
+    .main .experience-title {
+        font-size: 12px;
+        left: 10px;
+    }
+
+    .main .languages {
+        font-size: 10px;
+        right: 10px;
+    }
+
+
+    .text-right {
+        font-size: 12px;
+    }
+
+    .text-left, #home h1 {
+        font-size: 15px;
+    }
+
+    footer h1{
+        font-size: 15px;
+    }
+
+    footer ul {
+        display: flex;
+        list-style: none;
+        text-indent: 10px;
+    }
+    
+    footer img {
+        width: 20px;
+        height: 20px;
+    }
+
+  }

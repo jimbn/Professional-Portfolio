@@ -66,6 +66,10 @@ footer {
     flex-direction: column;
 }
 
+footer h1{
+    font-size: 30px;
+}
+
 footer ul {
     display: flex;
     list-style: none;
@@ -98,7 +102,7 @@ footer img {
     justify-content: center;
 }
 
-h1 {
+.application-name h1 {
     font-size: 40px;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, .25);
     border-bottom: 3px double rgba(0, 0, 0, .75);
@@ -113,3 +117,87 @@ h1 {
     flex-direction: column;
 }
 /* End of .appliation-description */
+
+
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+
+
+@media screen and (max-width: 980px) {
+
+    header nav ul {
+      width: 100%;
+      justify-content: right;
+    }
+  
+    footer ul, footer img {
+      text-align: center;
+    }
+
+  }
+  
+  /* MEDIA QUERY FOR TABLETS AND SMALLER */
+  @media screen and (max-width: 768px) {
+  
+    header {
+        justify-content: center;
+    } 
+
+   
+  }
+  
+  /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+  @media screen and (max-width: 575px) {
+    header nav ul li a {
+        font-size: 20px;
+    }
+
+    .application-image {
+        height: 300px;
+    }
+
+    .application-name h1 {
+        font-size: 20px;
+    }
+
+    .application-description {
+        font-size: 13px;
+    }
+
+    footer ul {
+        display: flex;
+        list-style: none;
+        text-indent: 10px;
+    }
+    
+    footer img {
+        width: 27px;
+        height: 27px;
+    }
+
+  }
+  
+  @media screen and (max-width: 375px) {
+    header nav ul li a {
+        font-size: 10px;
+    }
+
+    .application-image {
+        margin: 1em 0;
+    }
+
+    footer h1{
+        font-size: 15px;
+    }
+
+    footer ul {
+        display: flex;
+        list-style: none;
+        text-indent: 10px;
+    }
+    
+    footer img {
+        width: 20px;
+        height: 20px;
+    }
+
+  }
