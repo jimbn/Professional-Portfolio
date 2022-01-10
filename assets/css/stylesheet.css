@@ -34,11 +34,6 @@ header {
     z-index: 9999;
 }
 
-header a {
-    text-decoration: none;
-    color: black;
-}
-
 header nav {
     text-indent: 15px;
     font-size: 25px;
@@ -49,6 +44,11 @@ header nav ul{
     display: flex;
     flex-wrap: wrap;
     list-style: none;
+}
+
+header a {
+    text-decoration: none;
+    color: black;
 }
 
 header nav ul a:hover{
@@ -93,7 +93,7 @@ footer img {
 
 #home h1 {
     text-shadow: 5px 2px 25px rgba(192,192,192, .9);
-    font-size: 30px;
+    font-size: 50px;
 }
 
 .profile {
@@ -117,7 +117,6 @@ footer img {
 /* End of #about */
 
 /* Begin of . experience section */
-
 #experience {
     padding: 50px;
 }
@@ -133,6 +132,12 @@ footer img {
     position: relative;
     width: 50%;
     padding: 5px;
+    opacity: 50%;
+}
+
+.experience-title, .languages,
+.main .experience-title, .main .languages {
+    position:absolute;
 }
 
 .experience-individual img {
@@ -141,34 +146,36 @@ footer img {
     width: 100%;
 }
 
-
 .experience-individual:hover {
-    opacity: 75%;
+    opacity: 100%;
 }
 
+.experience-title, .languages {
+    color: rgba(0, 0, 0, .55);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, .25);
+    bottom: 20px;
+}
 
 .experience-title {
     font-size: 30px; 
     margin: 0 2px;
-    color: rgba(0, 0, 0, .55);
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, .25);
-    bottom: 20px;
     left: 20px;
-    position: absolute;
+}
+
+.experience-title, .main .experience-title {
+    text-align: left;
 }
 
 .languages {
     font-size: 20px;
-    text-align: right;
-    color:rgba(0, 0, 0, .55);
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, .25);
-    bottom: 20px;
     right: 20px;
-    z-index: 1;
-    position: absolute;
 }
 
-.languages ul {
+.languages, .main .languages {
+    text-align: right;
+}
+
+.languages ul, .main ul {
     list-style: none;
     align-items: right;
     text-align: left;
@@ -179,6 +186,7 @@ footer img {
     flex: 0 0 100%;
     text-align: center;
     flex-wrap: wrap;
+    opacity: 75%;
 }
 
 .main img {
@@ -188,30 +196,18 @@ footer img {
 }
 
 .main .experience-title {
-    position: relative;
     font-size: 60px; 
-    position: absolute;
     bottom: 25px;
-    text-align: left;
 }
 
 .main .languages {
-    position: relative;
     font-size: 30px;
-    position: absolute;
     bottom: 25x;
-    text-align: left;
 }
-
-.main ul {
-    list-style: none;
-    align-items: right;
-}
-
 /* End of .experience section */
 
 
-
+/* Utility */
 .text-right {
     overflow-wrap: break-word;
     text-align: left;
@@ -233,32 +229,26 @@ footer img {
 
 
 @media screen and (max-width: 980px) {
+    header nav ul {
+        width: 100%;
+        justify-content: right;
+    }
+      
+    footer ul, footer img {
+        text-align: center;
+    }
+    
+    #home h1{
+        font-size: 40px;
+    }
 
     .profile-picture img {
         height: 300px;
         width: 300px;
     }
 
-   .text-left {
-       flex: 0 70%;
-   }
-
-    header nav ul {
-      width: 100%;
-      justify-content: right;
-    }
-  
-
-    footer ul, footer img {
-      text-align: center;
-    }
-
     .experience-individual img {
         height: 150px;
-    }
-
-    .main img {
-        height:225px;
     }
 
     .experience-title {
@@ -269,6 +259,10 @@ footer img {
         font-size: 10px;
     }
 
+    .main img {
+        height:225px;
+    }
+
     .main .experience-title{
         font-size: 35px;
     }
@@ -277,17 +271,21 @@ footer img {
         font-size: 20px;
     }
 
+    .text-left {
+        flex: 0 70%;
+        font-size: 25px;
+    }
   }
   
   /* MEDIA QUERY FOR TABLETS AND SMALLER */
   @media screen and (max-width: 768px) {
-    .text-left{
-        font-size: 25px;
-    }
-
-    header {
+     header {
         justify-content: center;
     } 
+
+    #home h1 {
+        font-size: 30px;
+    }
 
     #about, #experience {
         padding: 0 2em;
@@ -301,16 +299,16 @@ footer img {
         height: 100px;
     }
 
-    .main img {
-        height:175px;
-    }
-
     .experience-title {
         font-size: 15px;
     }
 
     .languages {
         font-size: 10px;
+    }
+    
+    .main img {
+        height:175px;
     }
 
     .main .experience-title{
@@ -320,21 +318,27 @@ footer img {
     .main .languages {
         font-size: 20px;
     }
-  }
-
   
-    .text-right {
+    .text-right, .text-left {
         font-size: 20px;
     }      
-
-    .text-left, #home h1 {
-        font-size: 20px;
-    }
+  }
   
   /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
   @media screen and (max-width: 640px) {
     header nav ul li a {
         font-size: 20px;
+    }
+
+    footer ul {
+        display: flex;
+        list-style: none;
+        text-indent: 10px;
+    }
+    
+    footer img {
+        width: 27px;
+        height: 27px;
     }
 
     .profile-picture img {
@@ -374,7 +378,6 @@ footer img {
         bottom: 15px
     }
 
-
     .text-right, footer h1 {
         font-size: 15px;
     }
@@ -382,64 +385,11 @@ footer img {
     .text-left, #home h1 {
         font-size: 20px;
     }
-
-    footer ul {
-        display: flex;
-        list-style: none;
-        text-indent: 10px;
-    }
-    
-    footer img {
-        width: 27px;
-        height: 27px;
-    }
-
   }
   
   @media screen and (max-width: 480px) {
     header nav ul li a {
         font-size: 10px;
-    }
-
-    .experience-individual {
-        padding: 0;
-    }
-
-    .experience-individual img {
-        height: 50px;
-    }
-
-    .main img {
-        height: 75px;
-    }
-
-    .experience-title {
-        font-size: 8px;
-        bottom: 10px;
-        left: 5px;
-    }
-    
-    .languages {
-        font-size: 6px;
-        bottom: 10px;
-    }
-
-    .main .experience-title {
-        font-size: 12px;
-        left: 5px;
-    }
-
-    .main .languages {
-        font-size: 10px;
-        right: 10px;
-    }
-
-    .text-right {
-        font-size: 12px;
-    }
-
-    .text-left, #home h1 {
-        font-size: 15px;
     }
 
     footer {
@@ -461,4 +411,44 @@ footer img {
         height: 20px;
     }
 
+    .experience-individual {
+        padding: 0;
+    }
+
+    .experience-individual img {
+        height: 50px;
+    }
+
+    .experience-title {
+        font-size: 8px;
+        bottom: 10px;
+        left: 5px;
+    }
+    
+    .languages {
+        font-size: 6px;
+        bottom: 10px;
+    }
+    
+    .main img {
+        height: 75px;
+    }
+
+    .main .experience-title {
+        font-size: 12px;
+        left: 5px;
+    }
+
+    .main .languages {
+        font-size: 10px;
+        right: 10px;
+    }
+
+    .text-right {
+        font-size: 12px;
+    }
+
+    .text-left, #home h1 {
+        font-size: 15px;
+    }
   }

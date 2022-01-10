@@ -155,6 +155,17 @@ footer img {
         font-size: 15px;
     }
 
+    footer ul {
+        display: flex;
+        list-style: none;
+        text-indent: 10px;
+    }
+    
+    footer img {
+        width: 27px;
+        height: 27px;
+    }
+
     .application-image {
         height: 300px;
     }
@@ -167,26 +178,11 @@ footer img {
         font-size: 13px;
     }
 
-    footer ul {
-        display: flex;
-        list-style: none;
-        text-indent: 10px;
-    }
-    
-    footer img {
-        width: 27px;
-        height: 27px;
-    }
-
   }
   
   @media screen and (max-width: 400px) {
     header nav ul li a {
         font-size: 12px;
-    }
-
-    .application-image {
-        margin: 1em 0;
     }
 
     footer h1{
@@ -202,6 +198,10 @@ footer img {
     footer img {
         width: 20px;
         height: 20px;
+    }
+
+    .application-image {
+        margin: 1em 0;
     }
 
   }
