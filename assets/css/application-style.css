@@ -152,7 +152,7 @@ footer img {
   /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
   @media screen and (max-width: 575px) {
     header nav ul li a {
-        font-size: 20px;
+        font-size: 15px;
     }
 
     .application-image {
@@ -180,9 +180,9 @@ footer img {
 
   }
   
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 400px) {
     header nav ul li a {
-        font-size: 10px;
+        font-size: 12px;
     }
 
     .application-image {
