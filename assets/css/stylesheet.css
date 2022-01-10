@@ -5,7 +5,6 @@
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-/* Scroll padding to adjust for header {position: sticky;} */
 html {
     scroll-padding-top: 4rem;
 }
@@ -21,7 +20,6 @@ section {
 
 
 /* Begin of header / nav bar */
-
 header {
     padding: 15px 40px;
     background-image: linear-gradient(rgb(112, 128, 144),rgb(192, 192, 192));
@@ -56,10 +54,9 @@ header nav ul{
 header nav ul a:hover{
     color: slategrey;
 }
-
 /* End of header / nav bar */
-/* Begin of footer */
 
+/* Begin of footer */
 footer {
     margin-top: 3em;
     padding: 20px 40px;
@@ -81,11 +78,9 @@ footer img {
     width: 40px;
     height: 40px;
 }
-
 /* End of footer */
 
 /* Beginning of #home */
-
 #home {
     text-align: center;
     flex-direction: column;
@@ -95,14 +90,14 @@ footer img {
     flex-wrap: wrap;
 }
 
-.profile {
-    margin: 4em 0;
-    color: silver;
-}
-
 #home h1 {
     text-shadow: 5px 2px 25px rgba(192,192,192, .9);
     font-size: 30px;
+}
+
+.profile {
+    margin: 4em 0;
+    color: silver;
 }
 
 .profile-picture img {
@@ -112,13 +107,12 @@ footer img {
     color: rgba(0, 0, 0, .25);
     border-radius: 75%;
 }
-
 /* End of #home */
+
 /* Begin of #about*/
 #about {
     padding: 50px;
 }
-
 /* End of #about */
 
 /* Begin of . experience section */
