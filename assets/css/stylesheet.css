@@ -53,6 +53,10 @@ header nav ul{
     list-style: none;
 }
 
+header nav ul a:hover{
+    color: slategrey;
+}
+
 /* End of header / nav bar */
 /* Begin of footer */
 
@@ -85,15 +89,18 @@ footer img {
 #home {
     text-align: center;
     flex-direction: column;
-    background-color: rgb(128, 128, 128);
+    background-image: url("../images/portfolio-background.png");
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .profile {
     margin: 4em 0;
+    color: silver;
 }
 
 #home h1 {
-    text-shadow: 5px 2px 25px rgba(0, 0, 0, .9);
+    text-shadow: 5px 2px 25px rgba(192,192,192, .9);
     font-size: 30px;
 }
 
