@@ -5,7 +5,6 @@
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-/* Scroll padding to adjust for header {position: sticky;} */
 html {
     scroll-padding-top: 4rem;
 }
@@ -21,7 +20,6 @@ section {
 
 
 /* Begin of header / nav bar */
-
 header {
     padding: 15px 40px;
     background-image: linear-gradient(rgb(112, 128, 144),rgb(192, 192, 192));
@@ -56,10 +54,9 @@ header nav ul{
 header nav ul a:hover{
     color: slategrey;
 }
-
 /* End of header / nav bar */
-/* Begin of footer */
 
+/* Begin of footer */
 footer {
     margin-top: 3em;
     padding: 20px 40px;
@@ -81,17 +78,17 @@ footer img {
     width: 40px;
     height: 40px;
 }
-
 /* End of footer */
 
 /* Beginning of #home */
-
 #home {
     text-align: center;
     flex-direction: column;
-    background-image: url("../images/portfolio-background.png");
+    background: url('../images/portfolio-background.png') no-repeat center fixed;
     background-size: cover;
     background-attachment: fixed;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 #home h1 {
@@ -111,13 +108,12 @@ footer img {
     color: rgba(0, 0, 0, .25);
     border-radius: 75%;
 }
-
 /* End of #home */
+
 /* Begin of #about*/
 #about {
     padding: 50px;
 }
-
 /* End of #about */
 
 /* Begin of . experience section */
@@ -257,23 +253,14 @@ footer img {
       text-align: center;
     }
 
-  }
-  
-  /* MEDIA QUERY FOR TABLETS AND SMALLER */
-  @media screen and (max-width: 768px) {
-    .text-left{
-        font-size: 25px;
+    .experience-individual img {
+        height: 150px;
     }
 
-    header {
-        justify-content: center;
-    } 
-
-    #about .text-left {
-        padding-right: 4em;
+    .main img {
+        height:225px;
     }
-    
-  
+
     .experience-title {
         font-size: 20px;
     }
@@ -289,10 +276,63 @@ footer img {
     .main .languages {
         font-size: 20px;
     }
+
   }
   
+  /* MEDIA QUERY FOR TABLETS AND SMALLER */
+  @media screen and (max-width: 768px) {
+    .text-left{
+        font-size: 25px;
+    }
+
+    header {
+        justify-content: center;
+    } 
+
+    #about, #experience {
+        padding: 0 2em;
+    }
+
+    #about .text-left {
+        padding-right: 4em;
+    }
+    
+    .experience-individual img {
+        height: 100px;
+    }
+
+    .main img {
+        height:175px;
+    }
+
+    .experience-title {
+        font-size: 15px;
+    }
+
+    .languages {
+        font-size: 10px;
+    }
+
+    .main .experience-title{
+        font-size: 30px;
+    }
+
+    .main .languages {
+        font-size: 20px;
+    }
+  }
+
+  
+    .text-right {
+        font-size: 20px;
+    }      
+
+    .text-left, #home h1 {
+        font-size: 20px;
+    }
+  
   /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
-  @media screen and (max-width: 575px) {
+  @media screen and (max-width: 640px) {
     header nav ul li a {
         font-size: 20px;
     }
@@ -356,7 +396,7 @@ footer img {
 
   }
   
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 480px) {
     header nav ul li a {
         font-size: 10px;
     }
@@ -374,23 +414,25 @@ footer img {
     }
 
     .experience-title {
-        font-size: 7px;
+        font-size: 8px;
+        bottom: 10px;
+        left: 5px;
     }
     
     .languages {
-        font-size: 5px;
+        font-size: 6px;
+        bottom: 10px;
     }
 
     .main .experience-title {
         font-size: 12px;
-        left: 10px;
+        left: 5px;
     }
 
     .main .languages {
         font-size: 10px;
         right: 10px;
     }
-
 
     .text-right {
         font-size: 12px;
@@ -400,6 +442,10 @@ footer img {
         font-size: 15px;
     }
 
+    footer {
+        margin: 0;
+    }
+    
     footer h1{
         font-size: 15px;
     }
